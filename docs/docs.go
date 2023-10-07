@@ -21,7 +21,7 @@ const docTemplate = `{
                 "produces": [
                     "application/json"
                 ],
-                "summary": "List todos",
+                "summary": "Get all todos",
                 "responses": {
                     "200": {
                         "description": "OK",
@@ -35,14 +35,14 @@ const docTemplate = `{
                 }
             },
             "post": {
-                "description": "Create a new todo",
+                "description": "Create a new todos",
                 "consumes": [
                     "application/json"
                 ],
                 "produces": [
                     "application/json"
                 ],
-                "summary": "Create a todo",
+                "summary": "Create a todos",
                 "parameters": [
                     {
                         "description": "Todo input",
@@ -70,7 +70,7 @@ const docTemplate = `{
                 "produces": [
                     "application/json"
                 ],
-                "summary": "Get a todo by ID",
+                "summary": "Get a todos by ID",
                 "parameters": [
                     {
                         "type": "string",
@@ -90,14 +90,14 @@ const docTemplate = `{
                 }
             },
             "put": {
-                "description": "Update a todo by ID",
+                "description": "Update a todos by ID",
                 "consumes": [
                     "application/json"
                 ],
                 "produces": [
                     "application/json"
                 ],
-                "summary": "Update a todo by ID",
+                "summary": "Update a todos by ID",
                 "parameters": [
                     {
                         "type": "string",
@@ -126,11 +126,11 @@ const docTemplate = `{
                 }
             },
             "delete": {
-                "description": "Delete a todo by ID",
+                "description": "Delete a todos by ID",
                 "produces": [
                     "application/json"
                 ],
-                "summary": "Delete a todo by ID",
+                "summary": "Delete a todos by ID",
                 "parameters": [
                     {
                         "type": "string",
