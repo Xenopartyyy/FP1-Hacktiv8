@@ -66,7 +66,7 @@ func Create(c *gin.Context) {
 	db.DB.Create(&todos)
 	c.JSON(http.StatusOK, gin.H{
 		"message":  "todolist berhasil dimasukkan",
-		"todolust": todos,
+		"todolist": todos,
 	})
 
 }
