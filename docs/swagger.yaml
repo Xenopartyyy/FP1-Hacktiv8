@@ -23,11 +23,11 @@ paths:
             items:
               $ref: '#/definitions/models.Todos'
             type: array
-      summary: List todos
+      summary: Get all todos
     post:
       consumes:
       - application/json
-      description: Create a new todo
+      description: Create a new todos
       parameters:
       - description: Todo input
         in: body
@@ -42,10 +42,10 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/models.Todos'
-      summary: Create a todo
+      summary: Create a todos
   /todos/{id}:
     delete:
-      description: Delete a todo by ID
+      description: Delete a todos by ID
       parameters:
       - description: Todo ID
         in: path
@@ -59,7 +59,7 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/models.Todos'
-      summary: Delete a todo by ID
+      summary: Delete a todos by ID
     get:
       description: Get a todo by ID
       parameters:
@@ -75,11 +75,11 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/models.Todos'
-      summary: Get a todo by ID
+      summary: Get a todos by ID
     put:
       consumes:
       - application/json
-      description: Update a todo by ID
+      description: Update a todos by ID
       parameters:
       - description: Todo ID
         in: path
@@ -99,5 +99,5 @@ paths:
           description: OK
           schema:
             $ref: '#/definitions/models.Todos'
-      summary: Update a todo by ID
+      summary: Update a todos by ID
 swagger: "2.0"
