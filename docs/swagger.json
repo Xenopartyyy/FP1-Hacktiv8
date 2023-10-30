@@ -1,8 +1,12 @@
 {
     "swagger": "2.0",
     "info": {
+        "description": "Berikut ini adalah final project 1 mengenai pembuatan TODOLIST berbasis API.",
+        "title": "Final Project 1 Hacktiv8 TODOS",
         "contact": {}
     },
+    "host": "localhost:8080",
+    "basePath": "/",
     "paths": {
         "/todos": {
             "get": {
@@ -39,7 +43,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Todos"
+                            "$ref": "#/definitions/models.CreateTodos"
                         }
                     }
                 ],
@@ -101,7 +105,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Todos"
+                            "$ref": "#/definitions/models.CreateTodos"
                         }
                     }
                 ],
@@ -141,6 +145,17 @@
         }
     },
     "definitions": {
+        "models.CreateTodos": {
+            "type": "object",
+            "properties": {
+                "completed": {
+                    "type": "boolean"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
         "models.Todos": {
             "type": "object",
             "properties": {

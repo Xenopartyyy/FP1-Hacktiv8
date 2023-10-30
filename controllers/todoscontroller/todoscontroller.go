@@ -52,7 +52,7 @@ func Show(c *gin.Context) {
 // @Description Create a new todos
 // @Produce  json
 // @Accept json
-// @Param input body models.Todos true "Todo input"
+// @Param input body models.CreateTodos true "Todo input"
 // @Success 200 {object} models.Todos
 // @Router /todos [post]
 func Create(c *gin.Context) {
@@ -65,7 +65,6 @@ func Create(c *gin.Context) {
 
 	db.DB.Create(&todos)
 	c.JSON(http.StatusOK, gin.H{
-		"message":  "todolist berhasil dimasukkan",
 		"todolist": todos,
 	})
 
@@ -76,7 +75,7 @@ func Create(c *gin.Context) {
 // @Produce  json
 // @Accept json
 // @Param id path string true "Todo ID"
-// @Param input body models.Todos true "Todo input"
+// @Param input body models.CreateTodos true "Todo input"
 // @Success 200 {object} models.Todos
 // @Router /todos/{id} [put]
 func Update(c *gin.Context) {

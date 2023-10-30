@@ -10,6 +10,11 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
+// @title Final Project 1 Hacktiv8 TODOS
+// @description Berikut ini adalah final project 1 mengenai pembuatan TODOLIST berbasis API.
+// @host localhost:8080
+// @BasePath /
+// @query.collection.format multi
 func main() {
 	r := gin.Default()
 	db.ConnDB()

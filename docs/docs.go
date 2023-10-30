@@ -50,7 +50,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Todos"
+                            "$ref": "#/definitions/models.CreateTodos"
                         }
                     }
                 ],
@@ -112,7 +112,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Todos"
+                            "$ref": "#/definitions/models.CreateTodos"
                         }
                     }
                 ],
@@ -152,6 +152,17 @@ const docTemplate = `{
         }
     },
     "definitions": {
+        "models.CreateTodos": {
+            "type": "object",
+            "properties": {
+                "completed": {
+                    "type": "boolean"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
         "models.Todos": {
             "type": "object",
             "properties": {
@@ -172,11 +183,11 @@ const docTemplate = `{
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "",
-	Host:             "",
-	BasePath:         "",
+	Host:             "localhost:8080",
+	BasePath:         "/",
 	Schemes:          []string{},
-	Title:            "",
-	Description:      "",
+	Title:            "Final Project 1 Hacktiv8 TODOS",
+	Description:      "Berikut ini adalah final project 1 mengenai pembuatan TODOLIST berbasis API.",
 	InfoInstanceName: "swagger",
 	SwaggerTemplate:  docTemplate,
 	LeftDelim:        "{{",

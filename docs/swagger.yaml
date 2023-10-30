@@ -1,4 +1,12 @@
+basePath: /
 definitions:
+  models.CreateTodos:
+    properties:
+      completed:
+        type: boolean
+      title:
+        type: string
+    type: object
   models.Todos:
     properties:
       completed:
@@ -8,8 +16,12 @@ definitions:
       title:
         type: string
     type: object
+host: localhost:8080
 info:
   contact: {}
+  description: Berikut ini adalah final project 1 mengenai pembuatan TODOLIST berbasis
+    API.
+  title: Final Project 1 Hacktiv8 TODOS
 paths:
   /todos:
     get:
@@ -34,7 +46,7 @@ paths:
         name: input
         required: true
         schema:
-          $ref: '#/definitions/models.Todos'
+          $ref: '#/definitions/models.CreateTodos'
       produces:
       - application/json
       responses:
@@ -91,7 +103,7 @@ paths:
         name: input
         required: true
         schema:
-          $ref: '#/definitions/models.Todos'
+          $ref: '#/definitions/models.CreateTodos'
       produces:
       - application/json
       responses:
