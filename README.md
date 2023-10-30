@@ -8,3 +8,9 @@ Berikut ini adalah final project ke-1 dari hacktiv8, konsep dari aplikasi ini ad
 ## Anggota kelompok
  - Willyawan Maulana - GLNG-KS07-014
  - Dirham Triyadi - GLNG-KS07-025
+
+## Swagger default link
+
+ ```sh[
+http://localhost:8080/swagger/docs/index.html#/
+```
